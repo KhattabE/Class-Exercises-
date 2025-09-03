@@ -3,9 +3,12 @@ int rx = 10;
 int ry = 10;
 
 
+
+
 void setup() {
   //Creates the size of the canvas
   size(200, 200);
+  
 }
 
 
@@ -16,7 +19,8 @@ void draw() {
 
   strokeWeight(3);
   stroke(0, 255, 0);
-
+  
+  
   //A for loop to keep drawing points until i < width-10 (Draws the upper and lower points horizontaly)
   for (int i = 0; i < width-20; i++) {
     point(rx + i, ry);
