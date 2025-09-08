@@ -42,8 +42,6 @@ void setup() {
 
   //Method calling trafficLightDrawing()
   trafficLightDrawing();
-
-
 }
 
 
@@ -73,25 +71,14 @@ void draw() {
     yellowLightStop();
     break;
   }
-
-  //Draws the top circle
-  fill(lightTop);
-  stroke(255);
-  ellipse(500, 200, 150, 150);
-
-  //Draws the middle circle
-  fill(lightMiddle);
-  stroke(255);
-  ellipse(500, 400, 150, 150);
-
-  //Draws the bottom circle
-  fill(lightBottom);
-  stroke(255);
-  ellipse(500, 600, 150, 150);
+  
+  //Method calling trafficLightCircle()
+  trafficLightCircle();
+  
 }
 
 //Method that contains the code for drawing the traffic light box and pole
-void trafficLightDrawing(){
+void trafficLightDrawing() {
   //Draws the pole that holds the traffic light "box"
   strokeWeight(40);
   stroke(200);
@@ -132,4 +119,21 @@ void yellowLightStop() {
   lightTop = lightOff;
   lightMiddle = yellowColorOn;
   lightBottom = lightOff;
+}
+
+void trafficLightCircle() {
+  //Draws the top circle
+  fill(lightTop);
+  stroke(255);
+  ellipse(500, 200, 150, 150);
+
+  //Draws the middle circle
+  fill(lightMiddle);
+  stroke(255);
+  ellipse(500, 400, 150, 150);
+
+  //Draws the bottom circle
+  fill(lightBottom);
+  stroke(255);
+  ellipse(500, 600, 150, 150);
 }
