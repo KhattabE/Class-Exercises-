@@ -40,18 +40,10 @@ void setup() {
   //Background
   background(255);
 
+  //Method calling trafficLightDrawing()
+  trafficLightDrawing();
 
 
-  //Draws the pole that holds the traffic light "box"
-  strokeWeight(40);
-  stroke(200);
-  line(poleX1, poleY1, poleX1, poleY2);
-
-  //Draws our traffic light "box"
-  fill(0);
-  strokeWeight(3);
-  stroke(0);
-  rect(boxPosX, boxPosY, boxWidth, boxHeight);
 }
 
 
@@ -97,6 +89,21 @@ void draw() {
   stroke(255);
   ellipse(500, 600, 150, 150);
 }
+
+//Method that contains the code for drawing the traffic light box and pole
+void trafficLightDrawing(){
+  //Draws the pole that holds the traffic light "box"
+  strokeWeight(40);
+  stroke(200);
+  line(poleX1, poleY1, poleX1, poleY2);
+
+  //Draws our traffic light "box"
+  fill(0);
+  strokeWeight(3);
+  stroke(0);
+  rect(boxPosX, boxPosY, boxWidth, boxHeight);
+}
+
 
 //Method red light
 void redLightTop() {
